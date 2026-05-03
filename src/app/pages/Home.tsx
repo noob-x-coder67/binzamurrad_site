@@ -47,27 +47,27 @@ export function Home() {
     {
       name: "Ali Ashir", // Replace with real name
       role: "Full Stack Developer", // Replace with real role e.g. Lead Developer
-      image: "public/Team/Ali_Ashir.jpeg", // Place photo as: public/team/member1.jpg
+      image: "Team/Ali_Ashir.jpeg", // Place photo as: public/team/member1.jpg
     },
     {
       name: "Ameer Khan", // Replace with real name
       role: "Video Editor", // Replace with real role
-      image: "public/Team/Ameer_Khan.jpeg", // Place photo as: public/team/member2.jpg
+      image: "/Team/Ameer_Khan.jpeg", // Place photo as: public/team/member2.jpg
     },
     {
       name: "Meer Ahmad", // Replace with real name
       role: "Database Manager", // Replace with real role
-      image: "public/Team/Meer_Ahmad.jpeg", // Place photo as: public/team/member4.jpg
+      image: "/Team/Meer_Ahmad.jpeg", // Place photo as: public/team/member4.jpg
     },
     {
       name: "Saud Akbar", // Replace with real name
       role: "AI Engineer", // Replace with real role
-      image: "public/Team/Saud.jpg", // Place photo as: public/team/member5.jpg
+      image: "/Team/Saud.jpg", // Place photo as: public/team/member5.jpg
     },
     {
       name: "Hafiz M Maaz", // Graphic Designer
       role: "UI/UX  &  React Developer",
-      image: "public/Team/Maaz.jpeg", // Place photo as: public/team/maaz.jpg
+      image: "/Team/Maaz.jpeg", // Place photo as: public/team/maaz.jpg
     },
   ];
 
@@ -84,7 +84,7 @@ export function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="public/Hero_pic.jpg"
+            src="/Hero_pic.jpg"
             alt="Team collaboration"
             className="w-full h-full object-cover"
           />
@@ -171,7 +171,7 @@ export function Home() {
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 {/* Replace src with /images/zamurrad-khan.jpg after adding the photo */}
                 <img
-                  src="public/about_us_pic.jpg"
+                  src="/about_us_pic.jpg"
                   alt="Mr. Zamurrad Khan - Founder, Pakistan Sweet Home"
                   className="w-full h-full object-cover"
                 />
