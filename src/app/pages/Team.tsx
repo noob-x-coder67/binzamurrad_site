@@ -8,58 +8,57 @@ export function Team() {
   // Step 3: Update name, role, bio, skills, image, and social links below
   // ─────────────────────────────────────────────────────────────────────
   const teamMembers = [
-    {
-      name: "Ali Ashir", // Replace with real name
-      role: "Full Stack Developer", // Replace with real role
-      bio: "Ali Ashir drives the technological vision and execution of the company’s digital products. With a strong foundation in web development, software engineering, and AI-driven solutions", // Replace with real bio
-      skills: ["JavaScript", "Node JS", "Next Js", "MongoDB"], // Replace with real skills
-      image: "public/Team/Ali_Ashir.jpeg", // Place photo as: public/team/member1.jpg
-      github: "#", // Replace with real GitHub URL or remove
-      linkedin: "#", // Replace with real LinkedIn URL or remove
-      email: "member1@binzamurrad.com", // Replace with real email
-    },
-    {
-      name: "Ameer Khan",
-      role: "Video Editor",
-      bio: "Video Grapher and Video Editor with 3+ years of experience in video production and editing. Passionate about creating compelling visual narratives.", // Replace with real bio
-      skills: ["Premiere Pro", "After Effects", "DaVinci Resolve"], // Replace with real skills
-      image: "public/Team/Ameer_Khan.jpeg", // Place photo as: public/team/member2.jpg
-      github: "#",
-      linkedin: "#",
-      email: "member2@binzamurrad.com",
-    },
-
-    {
-      name: "Meer Ahmad",
-      role: "Database Manager",
-      bio: "Meer Ahmad oversees the organization and management of our databases, ensuring data integrity, security, and optimal performance. With expertise in database design.", // Replace with real bio
-      skills: ["SQL", "MongoDB", "PostgreSQL", "Oracle"],
-      image: "/team/member4.jpg", // Place photo as: public/team/member4.jpg
-      github: "#",
-      linkedin: "#",
-      email: "member4@binzamurrad.com",
-    },
-    {
-      name: "Saud Akbar",
-      role: "Ai Engineer",
-      bio: "Saud Akbar is responsible for developing and implementing AI-driven solutions that enhance our digital products and services. Currently Learning Agentic Ai.", // Replace with real bio
-      skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
-      image: "public/team/Saud.jpg", // Place photo as: public/team/member5.jpg
-      github: "#",
-      linkedin: "#",
-      email: "member5@binzamurrad.com",
-    },
-    {
-      name: "Hafiz Muhammad Maaz",
-      role: "UI/UX Designer & React Developer",
-      bio: "Creative graphic designer with 5+ years experience in logo design, branding, social media, UI/UX, and print design. Working with Pakistan Sweet Home since 2023.",
-      skills: ["React", "Photoshop", "Figma", "Illustrator"],
-      image: "public/team/Maaz.jpeg", // Place photo as: public/team/maaz.jpg
-      github: "#", // Add GitHub if available
-      linkedin: "#", // Add LinkedIn if available
-      email: "maaz@binzamurrad.com",
-    },
-  ];
+  {
+    name: "Ali Ashir",
+    role: "Full Stack Developer",
+    bio: "Ali Ashir drives the technological vision...",
+    skills: ["JavaScript", "Node JS", "Next Js", "MongoDB"],
+    image: "/Team/Ali_Ashir.jpeg",  // ✅ removed "public/"
+    github: "#",
+    linkedin: "#",
+    email: "member1@binzamurrad.com",
+  },
+  {
+    name: "Ameer Khan",
+    role: "Video Editor",
+    bio: "Video Grapher and Video Editor with 3+ years...",
+    skills: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
+    image: "/Team/Ameer_Khan.jpeg", // ✅ removed "public/"
+    github: "#",
+    linkedin: "#",
+    email: "member2@binzamurrad.com",
+  },
+  {
+    name: "Meer Ahmad",
+    role: "Database Manager",
+    bio: "Meer Ahmad oversees the organization...",
+    skills: ["SQL", "MongoDB", "PostgreSQL", "Oracle"],
+    image: "/Team/Meer_Ahmad.jpeg", // ✅ add his photo with this exact name
+    github: "#",
+    linkedin: "#",
+    email: "member3@binzamurrad.com",
+  },
+  {
+    name: "Saud Akbar",
+    role: "Ai Engineer",
+    bio: "Saud Akbar is responsible for developing...",
+    skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
+    image: "/Team/Saud.jpg",        // ✅ removed "public/"
+    github: "#",
+    linkedin: "#",
+    email: "member4@binzamurrad.com",
+  },
+  {
+    name: "Hafiz Muhammad Maaz",
+    role: "UI/UX Designer & React Developer",
+    bio: "Creative graphic designer with 5+ years...",
+    skills: ["React", "Photoshop", "Figma", "Illustrator"],
+    image: "/Team/Maaz.jpeg",       // ✅ removed "public/"
+    github: "#",
+    linkedin: "#",
+    email: "maaz@binzamurrad.com",
+  },
+];
 
   return (
     <div className="bg-[#0a0a0a] min-h-screen">
