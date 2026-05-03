@@ -2,22 +2,18 @@ import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // TODO: Connect this form to a real email service
+    // Options: EmailJS, Formspree, or your own backend
     console.log("Form submitted:", formData);
+    alert("Message sent! We will get back to you soon.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -25,21 +21,25 @@ export function Contact() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl mb-6 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <h1 className="text-5xl md:text-6xl mb-6 text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
               Get in Touch
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Have a project in mind? We would love to hear from you. Send us a message
+              and we will respond as soon as possible.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
+
+            {/* LEFT — CONTACT INFO */}
             <div>
-              <h2 className="text-3xl mb-6 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h2 className="text-3xl mb-6 text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
                 Contact Information
               </h2>
-
               <div className="space-y-6 mb-12">
+
+                {/* EMAIL — Replace with real email */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#0F3D2E] flex items-center justify-center text-[#C8A96A] flex-shrink-0">
                     <Mail size={20} />
@@ -47,21 +47,21 @@ export function Contact() {
                   <div>
                     <h3 className="text-white mb-1">Email</h3>
                     <p className="text-gray-400">info@binzamurrad.com</p>
-                    <p className="text-gray-400">support@binzamurrad.com</p>
                   </div>
                 </div>
 
+                {/* PHONE — Replace with real phone number */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#0F3D2E] flex items-center justify-center text-[#C8A96A] flex-shrink-0">
                     <Phone size={20} />
                   </div>
                   <div>
                     <h3 className="text-white mb-1">Phone</h3>
-                    <p className="text-gray-400">+92 300 1234567</p>
-                    <p className="text-gray-400">+92 321 7654321</p>
+                    <p className="text-gray-400">+92 302 0676767</p>
                   </div>
                 </div>
 
+                {/* LOCATION */}
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#0F3D2E] flex items-center justify-center text-[#C8A96A] flex-shrink-0">
                     <MapPin size={20} />
@@ -69,20 +69,22 @@ export function Contact() {
                   <div>
                     <h3 className="text-white mb-1">Location</h3>
                     <p className="text-gray-400">Pakistan Sweet Home</p>
-                    <p className="text-gray-400">Lahore, Pakistan</p>
+                    <p className="text-gray-400">H-9/4, Islamabad, Pakistan</p>
                   </div>
                 </div>
               </div>
 
+              {/* WHATSAPP — Replace number with real WhatsApp number */}
               <div className="bg-gradient-to-br from-[#0F3D2E]/30 to-transparent border border-[#0F3D2E]/50 rounded-xl p-8">
-                <h3 className="text-xl mb-4 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <h3 className="text-xl mb-4 text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
                   Prefer WhatsApp?
                 </h3>
                 <p className="text-gray-400 mb-6">
                   Get in touch with us directly on WhatsApp for quick responses.
                 </p>
+                {/* Replace 92XXXXXXXXXX with real WhatsApp number (no spaces or dashes) */}
                 <a
-                  href="https://wa.me/923001234567"
+                  href="https://wa.me/923020676767"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-lg hover:bg-[#25D366]/90 transition-all"
@@ -93,61 +95,40 @@ export function Contact() {
               </div>
             </div>
 
+            {/* RIGHT — CONTACT FORM */}
             <div>
               <form onSubmit={handleSubmit} className="bg-[#111111] rounded-xl p-8 border border-white/10">
-                <h2 className="text-3xl mb-6 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <h2 className="text-3xl mb-6 text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
                   Send us a Message
                 </h2>
-
                 <div className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-white mb-2">
-                      Your Name
-                    </label>
+                    <label htmlFor="name" className="block text-white mb-2">Your Name</label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
+                      type="text" id="name" name="name"
+                      value={formData.name} onChange={handleChange} required
                       className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#C8A96A] transition-colors"
-                      placeholder="John Doe"
+                      placeholder="Your full name"
                     />
                   </div>
-
                   <div>
-                    <label htmlFor="email" className="block text-white mb-2">
-                      Email Address
-                    </label>
+                    <label htmlFor="email" className="block text-white mb-2">Email Address</label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
+                      type="email" id="email" name="email"
+                      value={formData.email} onChange={handleChange} required
                       className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#C8A96A] transition-colors"
-                      placeholder="john@example.com"
+                      placeholder="your@email.com"
                     />
                   </div>
-
                   <div>
-                    <label htmlFor="message" className="block text-white mb-2">
-                      Message
-                    </label>
+                    <label htmlFor="message" className="block text-white mb-2">Message</label>
                     <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
+                      id="message" name="message"
+                      value={formData.message} onChange={handleChange} required rows={6}
                       className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#C8A96A] transition-colors resize-none"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
-
                   <button
                     type="submit"
                     className="w-full px-6 py-4 bg-[#0F3D2E] text-white rounded-lg hover:bg-[#0F3D2E]/90 transition-all flex items-center justify-center gap-2 group"
@@ -164,31 +145,6 @@ export function Contact() {
                   We typically respond to all inquiries within 24 hours during business days.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-gradient-to-r from-[#0F3D2E] to-[#0F3D2E]/80">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-[#C8A96A] mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                50+
-              </div>
-              <p className="text-gray-200">Projects Completed</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#C8A96A] mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                30+
-              </div>
-              <p className="text-gray-200">Happy Clients</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#C8A96A] mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                24/7
-              </div>
-              <p className="text-gray-200">Support Available</p>
             </div>
           </div>
         </div>

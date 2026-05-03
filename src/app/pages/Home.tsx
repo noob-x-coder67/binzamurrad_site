@@ -12,104 +12,84 @@ import {
   Award,
   Heart,
 } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Home() {
+  // ─────────────────────────────────────────────
+  // SERVICES — Edit title & description as needed
+  // ─────────────────────────────────────────────
   const services = [
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Website Development",
-      description:
-        "Custom websites built with modern technologies and best practices.",
-    },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Web Applications",
-      description: "Full-stack applications tailored to your business needs.",
-    },
-    {
-      icon: <Palette className="w-8 h-8" />,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive interfaces that users love.",
-    },
-    {
-      icon: <Layers className="w-8 h-8" />,
-      title: "Graphic Design",
-      description: "Eye-catching visuals for your brand and marketing.",
-    },
-    {
-      icon: <Video className="w-8 h-8" />,
-      title: "Video Editing",
-      description: "Professional video content that tells your story.",
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Digital Marketing",
-      description: "Strategies that drive growth and engagement.",
-    },
+    { icon: <Code className="w-8 h-8" />, title: "Website Development", description: "Custom websites built with modern technologies and best practices." },
+    { icon: <Smartphone className="w-8 h-8" />, title: "Web Applications", description: "Full-stack applications tailored to your business needs." },
+    { icon: <Palette className="w-8 h-8" />, title: "UI/UX Design", description: "Beautiful, intuitive interfaces that users love." },
+    { icon: <Layers className="w-8 h-8" />, title: "Graphic Design", description: "Eye-catching visuals for your brand and marketing." },
+    { icon: <Video className="w-8 h-8" />, title: "Video Editing", description: "Professional video content that tells your story." },
+    { icon: <TrendingUp className="w-8 h-8" />, title: "Digital Marketing", description: "Strategies that drive growth and engagement." },
   ];
 
+  // ─────────────────────────────────────────────
+  // WHY CHOOSE US — Edit as needed
+  // ─────────────────────────────────────────────
   const reasons = [
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Purpose-Driven Team",
-      description: "Every project supports our mission and growth.",
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Affordable Solutions",
-      description: "Quality services at competitive rates.",
-    },
-    {
-      icon: <Palette className="w-6 h-6" />,
-      title: "Creative Mindset",
-      description: "Fresh perspectives and innovative approaches.",
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Dedicated Support",
-      description: "We're with you every step of the way.",
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Growing Talent",
-      description: "Passionate students eager to excel.",
-    },
+    { icon: <Heart className="w-6 h-6" />, title: "Purpose-Driven Team", description: "Every project supports our mission and growth." },
+    { icon: <Target className="w-6 h-6" />, title: "Affordable Solutions", description: "Quality services at competitive rates." },
+    { icon: <Palette className="w-6 h-6" />, title: "Creative Mindset", description: "Fresh perspectives and innovative approaches." },
+    { icon: <Users className="w-6 h-6" />, title: "Dedicated Support", description: "We are with you every step of the way." },
+    { icon: <Award className="w-6 h-6" />, title: "Growing Talent", description: "Passionate students eager to excel." },
   ];
 
+  // ─────────────────────────────────────────────────────────────────────
+  // TEAM MEMBERS — Replace names, roles and image paths for all 5 members
+  // Step 1: Create folder: public/team/
+  // Step 2: Place each photo inside public/team/
+  // Step 3: Update name, role, and image below
+  // ─────────────────────────────────────────────────────────────────────
   const teamMembers = [
     {
-      name: "Ahmed Khan",
-      role: "Lead Developer",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      name: "Ali Ashir", // Replace with real name
+      role: "Full Stack Developer", // Replace with real role e.g. Lead Developer
+      image: "public/Team/Ali_Ashir.jpeg", // Place photo as: public/team/member1.jpg
     },
     {
-      name: "Fatima Ali",
-      role: "UI/UX Designer",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      name: "Ameer Khan", // Replace with real name
+      role: "Video Editor", // Replace with real role
+      image: "public/Team/Ameer_Khan.jpeg", // Place photo as: public/team/member2.jpg
     },
     {
-      name: "Hassan Raza",
-      role: "Full Stack Developer",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      name: "Meer Ahmad", // Replace with real name
+      role: "Database Manager", // Replace with real role
+      image: "public/Team/Meer_Ahmad.jpeg", // Place photo as: public/team/member4.jpg
+    },
+    {
+      name: "Saud Akbar", // Replace with real name
+      role: "AI Engineer", // Replace with real role
+      image: "public/Team/Saud.jpg", // Place photo as: public/team/member5.jpg
+    },
+    {
+      name: "Hafiz M Maaz", // Graphic Designer
+      role: "UI/UX  &  React Developer",
+      image: "public/Team/Maaz.jpeg", // Place photo as: public/team/maaz.jpg
     },
   ];
+
+  // Home page shows only first 3 members. Full team visible on /team page
+  const featuredMembers = teamMembers.slice(0, 5);
 
   return (
     <div className="bg-[#0a0a0a]">
+      {/* HERO SECTION
+          To change background image:
+          1. Place your photo in: public/images/hero.jpg
+          2. Replace src below with: /images/hero.jpg
+      */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop"
+          <img
+            src="public/Hero_pic.jpg"
             alt="Team collaboration"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-[#0a0a0a]"></div>
         </div>
-
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <h1
             className="text-6xl md:text-8xl mb-6 text-white tracking-tight"
@@ -126,13 +106,17 @@ export function Home() {
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Building websites, apps, and digital experiences with purpose.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Portfolio link — uncomment when first project is ready
+            <Link to="/portfolio" className="px-8 py-4 bg-[#0F3D2E] text-white rounded-lg hover:bg-[#0F3D2E]/90 transition-all flex items-center justify-center gap-2 group">
+              View Our Work
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link> */}
             <Link
-              to="/portfolio"
+              to="/services"
               className="px-8 py-4 bg-[#0F3D2E] text-white rounded-lg hover:bg-[#0F3D2E]/90 transition-all flex items-center justify-center gap-2 group"
             >
-              View Our Work
+              Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -145,6 +129,12 @@ export function Home() {
         </div>
       </section>
 
+      {/* ABOUT US SECTION
+          To add Mr. Zamurrad Khan photo:
+          1. Place photo in: public/images/zamurrad-khan.jpg
+          2. Replace src below with: /images/zamurrad-khan.jpg
+          Edit the text paragraphs as needed
+      */}
       <section className="py-24 px-6 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -156,28 +146,33 @@ export function Home() {
                 About Us
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                BinZamurrad is a student-led digital agency comprised of
-                talented individuals from Pakistan Sweet Home. We are a
-                mission-driven team of young professionals passionate about
-                technology and making a positive impact.
+                BinZamurrad is a student-led digital agency born from the heart
+                of <span className="text-[#C8A96A]">Pakistan Sweet Home</span> —
+                the largest orphanage in South Asia, founded by the legendary{" "}
+                <span className="text-white font-semibold">
+                  Mr. Zamurrad Khan (Hilal-e-Imtiaz)
+                </span>
+                . Our agency reflects his vision: empowering young talent to
+                build, create, and make a positive impact through technology.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Our focus is on delivering high-quality IT services while
-                fostering growth, learning, and community support. Every project
-                we take on helps us develop our skills and contributes to our
-                collective success.
+                We are a team of passionate students delivering high-quality
+                digital services from web development and UI/UX design to
+                graphic design, video editing, and digital marketing. Every
+                project we take on helps us grow and contributes to our
+                collective mission.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We combine fresh perspectives with dedication to create digital
                 solutions that matter.
               </p>
             </div>
-
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=800&fit=crop"
-                  alt="Team working together"
+                {/* Replace src with /images/zamurrad-khan.jpg after adding the photo */}
+                <img
+                  src="public/about_us_pic.jpg"
+                  alt="Mr. Zamurrad Khan - Founder, Pakistan Sweet Home"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -188,6 +183,7 @@ export function Home() {
         </div>
       </section>
 
+      {/* SERVICES SECTION */}
       <section className="py-24 px-6 bg-gradient-to-b from-[#0a0a0a] to-[#0F3D2E]/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -202,7 +198,6 @@ export function Home() {
               business thrive online.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
@@ -224,7 +219,6 @@ export function Home() {
               </div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <Link
               to="/services"
@@ -237,6 +231,7 @@ export function Home() {
         </div>
       </section>
 
+      {/* WHY CHOOSE US SECTION */}
       <section className="py-24 px-6 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -251,7 +246,6 @@ export function Home() {
               drive to succeed.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reasons.map((reason, index) => (
               <div
@@ -276,6 +270,11 @@ export function Home() {
         </div>
       </section>
 
+      {/* TEAM PREVIEW SECTION
+          Shows 3 members on home page. All 5 visible on /team page.
+          Add photos to: public/team/ folder
+          Update names and roles in teamMembers array above
+      */}
       <section className="py-24 px-6 bg-gradient-to-b from-[#0a0a0a] to-[#0F3D2E]/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -286,18 +285,21 @@ export function Home() {
               Meet Our Team
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Talented students passionate about technology and innovation.
+              Talented students from Pakistan Sweet Home, passionate about
+              technology and innovation.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {teamMembers.map((member, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+            {featuredMembers.map((member, index) => (
               <div key={index} className="text-center group">
-                <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#0F3D2E] group-hover:border-[#C8A96A] transition-all">
-                  <ImageWithFallback
+                <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#0F3D2E] group-hover:border-[#C8A96A] transition-all bg-[#111111] flex items-center justify-center">
+                  <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
                   />
                 </div>
                 <h3
@@ -310,7 +312,6 @@ export function Home() {
               </div>
             ))}
           </div>
-
           <div className="text-center">
             <Link
               to="/team"
@@ -322,13 +323,14 @@ export function Home() {
         </div>
       </section>
 
+      {/* CTA SECTION */}
       <section className="py-24 px-6 bg-gradient-to-r from-[#0F3D2E] to-[#0F3D2E]/80">
         <div className="max-w-4xl mx-auto text-center">
           <h2
             className="text-4xl md:text-5xl mb-6 text-white"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
-            Let's Build Something Together
+            Let us Build Something Together
           </h2>
           <p className="text-gray-200 mb-8 text-lg">
             Ready to bring your digital project to life? Get in touch with us
