@@ -23,14 +23,14 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* LOGO — Uses Bz_logo.png from public folder */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-[#0F3D2E] border border-[#C8A96A]/50 flex items-center justify-center">
+            {/* <div className="w-10 h-10 rounded-lg bg-[#0F3D2E] border border-[#C8A96A]/50 flex items-center justify-center">
               <span
                 className="text-sm font-bold text-[#C8A96A]"
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 BZ
               </span>
-            </div>
+            </div> */}
             <span
               className="text-xl font-bold text-white"
               style={{ fontFamily: "Poppins, sans-serif" }}
