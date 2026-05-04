@@ -216,7 +216,7 @@ export function Home() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/about_us_pic.JPG"
+                  src="/about_us_pic.jpg"
                   alt="Mr. Zamurrad Khan - Founder, Pakistan Sweet Home"
                   className="w-full h-full object-cover"
                 />
