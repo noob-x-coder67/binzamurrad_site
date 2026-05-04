@@ -91,13 +91,13 @@ export function Home() {
     {
       name: "Meer Ahmad",
       role: "Frontend Developer",
-      image: "/Team/Meer_Ahmad.jpeg",
+      image: "/Team/Meer_Ahmad.jpg",
     },
     { name: "Saud Akbar", role: "AI Engineer", image: "/Team/Saud.jpg" },
     {
       name: "Hafiz M Maaz",
       role: "UI/UX & React Developer",
-      image: "/Team/Maaz.jpeg",
+      image: "/Team/Maaz.jpg",
     },
   ];
 
@@ -107,7 +107,7 @@ export function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/Hero_pic.png"
+            src="/Hero_pic.jpg"
             alt="Team collaboration"
             className="w-full h-full object-cover object-center"
           />
@@ -122,7 +122,7 @@ export function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1
-            className="text-6xl md:text-8xl mb-6 text-white tracking-tight"
+            className="text-6xl md:text-8xl mb-6 text-white tracking-tight font-bold"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             BinZamurrad
