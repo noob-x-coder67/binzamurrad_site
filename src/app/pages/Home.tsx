@@ -131,7 +131,7 @@ export function Home() {
             className="text-2xl md:text-3xl text-[#C8A96A] mb-4"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
-            A Student-Led Digital Agency
+            A Student-Led Digital Agency.
           </p>
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Building websites, apps, and digital experiences with purpose.
