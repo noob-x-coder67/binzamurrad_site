@@ -29,7 +29,7 @@ export function Team() {
       bio: "Creative Video Editor skilled in Premiere Pro, After Effects, and DaVinci Resolve. Brings ideas to life through compelling visual storytelling and high-quality edits.",
       skills: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
       image: "/Team/Ameer_Khan.jpg",
-      github: "#",
+      github: "https://github.com/EngAmeerkhan",
       linkedin:
         "https://www.linkedin.com/in/ameer-khan-93739a2a1?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
       email: "itsameerkhan03477@gmail.com",
