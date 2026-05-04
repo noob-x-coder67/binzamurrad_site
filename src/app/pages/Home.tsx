@@ -81,16 +81,16 @@ export function Home() {
     {
       name: "Ali Ashir",
       role: "Full Stack Developer",
-      image: "/Team/Ali_Ashir.jpeg",
+      image: "/Team/Ali_Ashir.jpg",
     },
     {
       name: "Ameer Khan",
       role: "Video Editor",
-      image: "/Team/Ameer_Khan.jpeg",
+      image: "/Team/Ameer_Khan.jpg",
     },
     {
       name: "Meer Ahmad",
-      role: "Database Manager",
+      role: "Frontend Developer",
       image: "/Team/Meer_Ahmad.jpeg",
     },
     { name: "Saud Akbar", role: "AI Engineer", image: "/Team/Saud.jpg" },
@@ -107,7 +107,7 @@ export function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/Hero_pic.jpg"
+            src="/Hero_pic.png"
             alt="Team collaboration"
             className="w-full h-full object-cover object-center"
           />
@@ -216,7 +216,7 @@ export function Home() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/about_us_pic.jpg"
+                  src="/about_us_pic.JPG"
                   alt="Mr. Zamurrad Khan - Founder, Pakistan Sweet Home"
                   className="w-full h-full object-cover"
                 />
