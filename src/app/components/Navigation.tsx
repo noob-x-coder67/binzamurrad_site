@@ -18,19 +18,27 @@ export function Navigation() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav
+      className="fixed top-0 w-full z-50 backdrop-blur-md"
+      style={{
+        background: "rgba(0, 0, 0, 0.25)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+        boxShadow: "0 1px 0 rgba(255,255,255,0.06)",
+      }}
+    >
+      {/* Top gloss line */}
+      <div
+        className="absolute inset-x-0 top-0 h-px pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* LOGO — Uses Bz_logo.png from public folder */}
+          {/* LOGO */}
           <Link to="/" className="flex items-center gap-2">
-            {/* <div className="w-10 h-10 rounded-lg bg-[#0F3D2E] border border-[#C8A96A]/50 flex items-center justify-center">
-              <span
-                className="text-sm font-bold text-[#C8A96A]"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
-                BZ
-              </span>
-            </div> */}
             <span
               className="text-xl font-bold text-white"
               style={{ fontFamily: "Poppins, sans-serif" }}
@@ -46,10 +54,10 @@ export function Navigation() {
                 key={link.path}
                 to={link.path}
                 className={
-                  "transition-colors " +
+                  "text-sm font-medium tracking-wide transition-colors duration-200 " +
                   (isActive(link.path)
                     ? "text-[#C8A96A]"
-                    : "text-gray-300 hover:text-white")
+                    : "text-white/55 hover:text-white")
                 }
               >
                 {link.name}
@@ -59,7 +67,7 @@ export function Navigation() {
 
           {/* MOBILE MENU BUTTON */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white/70 hover:text-white transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,10 +83,10 @@ export function Navigation() {
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 className={
-                  "block py-2 transition-colors " +
+                  "block py-2 text-sm font-medium tracking-wide transition-colors duration-200 " +
                   (isActive(link.path)
                     ? "text-[#C8A96A]"
-                    : "text-gray-300 hover:text-white")
+                    : "text-white/55 hover:text-white")
                 }
               >
                 {link.name}
