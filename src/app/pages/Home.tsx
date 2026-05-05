@@ -122,13 +122,13 @@ export function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1
-            className="text-6xl md:text-8xl mb-6 text-white tracking-tight font-bold"
+            className="text-4xl sm:text-6xl md:text-8xl mb-6 text-white tracking-tight"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             BinZamurrad
           </h1>
           <p
-            className="text-2xl md:text-3xl text-[#C8A96A] mb-4"
+            className="text-lg sm:text-2xl md:text-3xl text-[#C8A96A] mb-4"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             A Student-Led Digital Agency.

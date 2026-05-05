@@ -19,7 +19,7 @@ export function Navigation() {
 
   return (
     <nav
-      className="fixed top-0 w-full z-50 backdrop-blur-md"
+      className="fixed top-0 w-full z-50 backdrop-blur-md overflow-hidden"
       style={{
         background: "rgba(0, 0, 0, 0.25)",
         borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
@@ -35,7 +35,7 @@ export function Navigation() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-2">
